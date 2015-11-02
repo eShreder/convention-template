@@ -1,0 +1,10 @@
+.btns{
+	display: inline-block;
+	&.s-net{
+		width: 20px;
+		height: 20px;
+		background-image: url('/images/facebook.png');
+		background-size: cover;
+		margin: 3px;
+	}
+}

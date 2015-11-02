@@ -1,0 +1,19 @@
+{
+  "name": "convention",
+  "version": "1.0.0",
+  "authors": [
+    "eShreder <eshreder@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_modules",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bourbon": "~4.2.6"
+  }
+}

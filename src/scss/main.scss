@@ -1,0 +1,17 @@
+@import 'colors';
+@import 'variables';
+@import 'reset';
+
+section{
+	&.full{
+		width: 100%;
+		position: relative;
+	}
+}
+div.container{
+	position: relative;
+	width: $container_width;
+	margin: 0 auto;
+}
+
+@import '../jade/sections/top-bar/top-bar';

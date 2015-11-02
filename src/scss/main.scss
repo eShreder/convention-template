@@ -1,7 +1,26 @@
+@import '../bower_modules/bourbon/app/assets/stylesheets/_bourbon.scss';
 @import 'colors';
 @import 'variables';
 @import 'reset';
 
+@import 'button';
+
+.float-left{
+	float: left;
+}
+@mixin in_line(){
+	&:first-child{
+		margin-left: 0;
+		padding-left: 0;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+html{
+	font-family: 'Ubuntu', sans-serif;
+}
 section{
 	&.full{
 		width: 100%;

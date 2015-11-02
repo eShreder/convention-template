@@ -30,14 +30,12 @@ gulp.task('sass', function() {
 gulp.task('jade', function() {
   var locals = {};
   gulp.src('./src/jade/*.jade')
-    .pipe(jade({
-      locals: locals
-    }))
+    .pipe(jade({}))
     .pipe(gulp.dest('./build/'))
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./src/scss/*.scss'], ['sass']);
+  gulp.watch(['./src/scss/*.scss', './src/jade/**/*.scss'], ['sass']);
   gulp.watch(['./src/jade/*.jade','./src/jade/**/*.jade'], ['jade']);
   gulp.watch(['./build/*.html'], ['html-reload']);
 });

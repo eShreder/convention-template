@@ -2,3 +2,13 @@ section.top-bar.full
 	.container
 		.logo
 			img(src="/images/top-text.png")
+		.menu
+			each link_title, index in ['о конвенции', 'участники', 'заявка участника', 'СМИ и спонсоры', 'контакты', 'билеты']
+				a(class={'active':index===0}, href='#')=link_title 
+		.right-ls
+			.lang
+				each title, index in ['rus', 'eng']
+					a(class={'active':index===0}, href='#')=title
+			.nets
+				each title in ['facebook', 'instagram', 'vk']
+					a(class='btns s-net ' + title , href='#')

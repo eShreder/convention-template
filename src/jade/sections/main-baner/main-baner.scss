@@ -1,3 +1,74 @@
+.bottom{
+    position: relative;
+    top: 100vh;
+    @include transform(translateY(-100%));
+}
 section.main-baner{
-	min-height: 720px;
+	min-height: 100vh;
+	margin-top: -75px;
+
+	.container{
+		@extend .bottom;
+		@include clearfix;
+	}
+	.left{
+		@extend .float-left;
+		left: $container_paddin;
+		svg{
+			width: 485px;
+			fill: $white;
+		}
+	}
+	.right{
+		right: $container_paddin;
+		@extend .float-left;
+		svg{
+			width: 245px;
+		}
+		
+		.date{
+			display: block;
+			margin-bottom: 7px;
+    		height: 150px;
+			border-bottom: solid 3px $white;
+			position: relative;
+		}
+		span{
+			color: $white;
+			font-weight: 700;
+			&.day{
+				position: relative;
+				top:35px;
+				font-size: 60px;
+				&:nth-child(3){
+					&:after{
+						display: none;
+					}
+				}
+				&:after{
+					content: "|";
+					position: relative;
+					display: inline-block;
+					font-size: 60px;
+
+				}
+			}
+			&.month{
+				position: absolute;
+				bottom: 5px;
+				left: 0;
+				font-size: 50px;
+			}
+			&.year{
+				position: absolute;
+				bottom: 5px;
+				right: 0;
+				font-size: 50px;
+			}
+		}
+	}
+	.left,.right{
+		position: absolute;
+		bottom: $container_paddin;
+	}
 }

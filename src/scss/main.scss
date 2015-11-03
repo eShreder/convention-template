@@ -2,6 +2,7 @@
 @import 'colors';
 @import 'variables';
 @import 'reset';
+@import 'typograph';
 
 @import 'button';
 
@@ -18,6 +19,7 @@
 	}
 }
 
+
 html{
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -25,6 +27,7 @@ section{
 	&.full{
 		width: 100%;
 		position: relative;
+		z-index: $z-section;
 	}
 	.bg{
 		position: absolute;
@@ -45,9 +48,15 @@ section{
 }
 div.container{
 	position: relative;
-	width: $container_width;
+	width: $container_width - $container_paddin * 2;
 	margin: 0 auto;
+	padding: $container_paddin;
+}
+.text-right{
+	text-align: right;
 }
 
 @import '../jade/sections/top-bar/top-bar';
 @import '../jade/sections/main-baner/main-baner';
+@import '../jade/sections/description/description';
+@import '../jade/sections/participants/participants';

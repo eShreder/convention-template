@@ -2,6 +2,11 @@ section.top-bar{
 	@include clearfix;
 	background: $top-bar-bg;
 	min-height: 75px;
+	z-index: $z-topbar;
+	.container{
+		padding: 0;
+		width: $container_width;
+	}
 	.logo{
 		@extend .float-left;
 		padding-top: 20px;

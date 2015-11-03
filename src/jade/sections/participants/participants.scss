@@ -1,0 +1,19 @@
+section.participants{
+	h1{
+		@extend .btns.text;
+		@include btns_param(600px, 16px, $black);
+		margin: 25px 0;
+		font-size: 40px;
+		font-weight: 500;
+		letter-spacing: 7px;
+	}
+	.show-all{
+		display: block;
+		position: absolute;
+		right: 0px;
+		top: 50px;
+		color: $black;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

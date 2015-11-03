@@ -1,0 +1,40 @@
+section.description{
+	min-height: 100vh;
+	.container{
+		padding-top: 80px;
+	}
+	.left{
+		color: $white;
+		p {
+			width: 400px;
+		}
+	}
+	.time{
+		width: 180px;
+		margin-top: 20px;
+		margin-bottom: 40px;
+		p,span{
+			font-size: 17px;
+			line-height: 23px;
+		}
+		p{
+			width: 100%;
+			letter-spacing: 1px;
+			margin-bottom: 2px;
+		}
+		span{
+			display: block;
+			font-weight: 300;
+			text-transform: uppercase;
+			word-spacing: 2px;
+		}
+	}
+	a.history{
+		color: white;
+		display: block;
+		margin-top: 40px;
+		font-size: 29px;
+		line-height: 32px;
+		letter-spacing: 1px;
+	}
+}

@@ -1,0 +1,23 @@
+h1 {
+	font-size: $font-size-h1;
+	text-transform: uppercase;
+	line-height: $font-size-h1 * 1.2;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	&:first-child{
+		margin-top: 0;
+	}
+}
+p {
+	font-size: $font-size-p;
+	line-height: $font-size-p * 1.4;
+	font-weight: 300;
+	&.upper-title{
+		font-size: $font-size-h1 / 2.5;
+		text-transform: uppercase;
+	}
+}
+a{
+	color: $select;
+	text-decoration: none;
+}

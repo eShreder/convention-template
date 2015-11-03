@@ -1,3 +1,14 @@
 section.main-baner.full
 	.bg
 		img(src='/images/main-baner-pre.jpg')
+	.container
+		.left
+			include ../../../images/top-text.svg 
+		.right
+			a(class='btns standart text', href='#') купить билет 
+			.date
+				each d in [27,28,29]
+					span.day=d
+				span.month МАЙ
+				span.year 2016
+			include ../../../images/top-right-logo.svg 

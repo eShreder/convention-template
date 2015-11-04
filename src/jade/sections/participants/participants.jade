@@ -2,3 +2,16 @@ section.participants
 	.container
 		h1 участники
 		a(class='show-all text-right', href='#') посмотреть участников<br/>одним списком
+		.list
+			.header
+				.left
+					a(class='back', href='#') назад
+				.right
+					a(class='next', href='#') дальше
+			.participants
+				- var n = 8, i = 0
+				while i < n
+					- i++
+					.people
+						.photo
+							img(src='/images/participants/Robi-Pena-pre.jpg')

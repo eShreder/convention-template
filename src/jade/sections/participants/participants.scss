@@ -16,4 +16,43 @@ section.participants{
 		font-size: 14px;
 		line-height: 20px;
 	}
+	.header{
+		@include clearfix;
+		position: relative;
+		a{
+			display: inline-block;
+			color: $gray;
+			font-size: 15px;
+			letter-spacing: 1px;
+			font-weight: 500;
+			padding: 20px 0;
+			&:hover{
+				color: $black;
+			}
+		}
+		.left, .right{
+			@extend .float-left;	
+			width: 50%;
+		}
+		.right{
+			text-align: right;
+		}
+	}
+	.participants {
+		@include clearfix;
+		width: $participants_width;
+		padding-bottom: 80px;
+		.people{
+			@extend .float-left;
+			width: $participants_people_width;
+			height: $participants_people_width;
+			overflow: hidden;
+		}
+		.photo{
+			max-height: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
 }

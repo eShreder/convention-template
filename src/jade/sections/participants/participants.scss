@@ -10,7 +10,7 @@ section.participants{
 	.show-all{
 		display: block;
 		position: absolute;
-		right: $container_paddin;
+		right: $container_paddin - 5px;
 		top: 50px;
 		color: $black;
 		font-size: 14px;

@@ -1,0 +1,26 @@
+- var formFields = []
+- formFields.push({label: "Название организации,студии, мастера", width: 2})
+- formFields.push({label: "Контактный телефон", width: 2})
+- formFields.push({label: "Сайт, ссылки на социальные сети (IG, FB, ВК)", width: 1})
+- formFields.push({label: "Контактное лицо, E-mail", width: 2})
+- formFields.push({label: "Специализация (татуировка, торговля, другое)", width: 2})
+
+section.request.full
+	.bg
+		img(src='/images/request-bg-pre.jpg')
+	.container
+		h1.bg-white Заявка на участие
+		form
+			.fields
+				each field in formFields
+					div(class="input-field w" +  field.width)
+						label #{field.label}
+						input(type='text', value='my supper text')
+			.actions
+				.left
+					a(class='btns standart text', href='#') отправить заявку
+				.right
+					a(class='action', href='#') отель для участников и посетителей
+					a(class='action', href='#') скачать правила участия
+
+

@@ -7,6 +7,10 @@ h1 {
 	&:first-child{
 		margin-top: 0;
 	}
+	&.bg-white{
+		color: $black;
+		background: $white;
+	}
 }
 p {
 	font-size: $font-size-p;

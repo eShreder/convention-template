@@ -1,7 +1,16 @@
 section.top-bar.full
 	.container
 		.logo
-			img(src="/images/top-text.png")
+			svg(
+				version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 			viewBox="0 176.1 420 234"
+	 			style="fill:white" 
+	 			xml:space="preserve"
+				)
+				use(
+						xlink:href="#text-logo"
+					)
 		.menu
 			each link_title, index in ['о конвенции', 'участники', 'заявка участника', 'СМИ и спонсоры', 'контакты', 'билеты']
 				a(class={'active':index===0}, href='#')=link_title 
@@ -9,6 +18,4 @@ section.top-bar.full
 			.lang
 				each title, index in ['rus', 'eng']
 					a(class={'active':index===0}, href='#')=title
-			.nets
-				each title in ['facebook', 'instagram', 'vk']
-					a(class='btns s-net ' + title , href='#')
+			+socialNets(1,1,1)

@@ -1,0 +1,20 @@
+.btns{
+	display: inline-block;
+	text-decoration: none;
+	line-height: 1;
+	&.s-net{
+		width: 20px;
+		height: 20px;
+		background-size: cover;
+		margin: 3px;
+		&.facebook{
+			background-image: url('/images/facebook.png');
+		}
+		&.vk{
+			background-image: url('/images/vk.png');
+		}
+		&.instagram{
+			background-image: url('/images/instagram.png');
+		}
+	}
+}

@@ -14,18 +14,15 @@
 		})
 	})
 
-	var bgsParalax = $('.bg.paralax').map(function(index, el){
-		return [[$(el).offset().top, $(el)]];
-	});
-
-	$(document).on('scroll', function(e){
-		var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-		for(var i = 0; i < bgsParalax.length; i++){
-			if(bgsParalax[i][0] <= scrolled){
-				bgsParalax[i][1].css({
-					'margin-top':  - (bgsParalax[i][0] - scrolled)/2 + 'px'
+	$('.bg.paralax').each(function(index, el){
+		var _e = [$(el).offset().top, $(el)];
+		$(window).on('scroll', function(e){
+			var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+			if(_e[0] <= scrolled){
+				_e[1].css({
+					'transform':'translate3d(0,' + - (_e[0] - scrolled)/2 + 'px, 0)'
 				});
 			}
-		}
-	})
+		})
+	});
 });

@@ -15,6 +15,9 @@ section.top-bar{
 	.logo{
 		@extend .float-left;
 		padding-top: 20px;
+		svg{
+			width: 86px;
+		}
 	}
 	.menu{
 		@extend .float-left;

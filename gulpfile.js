@@ -10,6 +10,7 @@ var sass = require('gulp-sass'),
 gulp.task('connect', function() {
   connect.server({
     root: './build/',
+    listen: '0.0.0.0',
     port: 8083,
     livereload: true
   });

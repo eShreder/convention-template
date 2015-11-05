@@ -40,7 +40,9 @@ section{
 		z-index: 100;
 	}
 	.bg{
-		
+		&.paralax{
+			// @include transition(transform 2.0s ease-in-out);
+		}
 		img.man {
 		    z-index: 121;
 		}
@@ -56,8 +58,12 @@ section{
 	}
 	.fade{
 		background-color: rgb(0,0,0);
-		opacity: 0;	
+		opacity: 0.83;	
 		z-index: 10;
+		&.active{
+			opacity: 0;
+			@include transition(opacity .1s ease-in-out);
+		}
 	}
 }
 div.container{

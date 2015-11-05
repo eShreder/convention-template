@@ -5,8 +5,6 @@
 }
 section.main-baner{
 	min-height: 100vh;
-	margin-top: -75px;
-
 	.container{
 		@extend .bottom;
 		@include clearfix;

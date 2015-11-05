@@ -1,0 +1,32 @@
+// $column_width: ($container_width - $container_paddin * 2) / 3;
+$paddin_column: 40px;
+section.footer{
+	background: $black;
+	color: $white;
+	.container{
+		@include clearfix;
+		padding-top: 85px;
+	}
+	.column{
+		@extend .float-left;
+		position: relative;
+		padding-top: 115px;
+		display: block;
+		&:nth-child(1){
+			width: 320px;
+		}
+		&:nth-child(2){
+			width: 330px;
+			margin-left: 50px;
+		}
+		h1{
+			position: absolute;
+			top:0;
+		}
+		p{
+			font-size: 15px;
+			line-height: 22px;
+			padding-bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+section.media{
+	// min-height: 100vh;
+	.container{
+		padding: 100px 0px 330px;
+		.row{
+			@include clearfix;
+			margin-top: 50px;
+			padding-bottom: 10px;
+			.left,.right{
+				@extend .float-left;
+				width: 50%;
+				p{
+					font-size: 20px;
+					line-height: 35px;
+					display: block;
+					width: 400px;
+					font-weight: 100;
+				}
+			}
+		}
+		img{
+			position: absolute;
+			bottom: 0;
+			right: -60px;
+		}
+	}
+	form.main {
+		.input-field{
+			label{
+				color: $black;
+				font-weight: 700;
+			}
+			input{
+				background-color: $media_input_bg;
+			}
+		}
+		.btns.standart.text{
+			border-color: $black;
+			color: $black;
+		}
+		.fields{
+			margin-bottom: 10px;
+		}
+		.actions{
+			margin-top: 0px;
+		}
+	}
+}

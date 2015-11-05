@@ -1,0 +1,29 @@
+- var partners = [];
+- partners.push({img: 'cheyenne-tattoo.png'})
+- partners.push({img: 'logo10.png'})
+- partners.push({img: 'logo13.png'})
+- partners.push({img: 'logo2.png'})
+- partners.push({img: 'logo6.png'})
+- partners.push({img: 'logo9.png'})
+- partners.push({img: 'partner_1.png'})
+- partners.push({img: 'funtattoo.png'})
+- partners.push({img: 'logo11.png'})
+- partners.push({img: 'logo14.png'})
+- partners.push({img: 'logo3.png'})
+- partners.push({img: 'logo7.png'})
+- partners.push({img: 'logo_tattoo.png'})
+- partners.push({img: 'logo1.png'})
+- partners.push({img: 'logo12.png'})
+- partners.push({img: 'logo15.png'})
+- partners.push({img: 'logo4.png'})
+- partners.push({img: 'logo8.png'})
+- partners.push({img: 'logog5.png'})
+section.partners.full
+	.bg
+		img(src='/images/preload/partners-bg.jpg')
+	.container
+		h1(class="bg-white") Программа
+		.row
+			each p in partners
+				.element
+					img(src='/images/partners/' + p.img)

@@ -15,6 +15,12 @@ gulp.task('connect', function() {
   });
 });
 
+gulp.task('js', function() {
+  gulp.src('./src/js/*.js')
+    .pipe(gulp.dest('./build/js'))
+
+});
+
 gulp.task('html-reload', function() {
   gulp.src('./build/*.html')
     .pipe(connect.reload());
@@ -38,6 +44,7 @@ gulp.task('watch', function() {
   gulp.watch(['./src/scss/*.scss', './src/jade/**/*.scss'], ['sass']);
   gulp.watch(['./src/jade/*.jade','./src/jade/**/*.jade'], ['jade']);
   gulp.watch(['./build/*.html'], ['html-reload']);
+  gulp.watch(['./src/js/**/*.js'], ['js','html-reload']);
 });
 
 gulp.task('default', ['connect', 'watch']);

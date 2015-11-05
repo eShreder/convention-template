@@ -5,22 +5,15 @@
 - formFields.push({label: "Контактное лицо, E-mail", width: 2})
 - formFields.push({label: "Специализация (татуировка, торговля, другое)", width: 2})
 
+- var actions = []
+- actions.push({href:"#", text:"отель для участников и посетителей"})
+- actions.push({href:"#", text:"скачать правила участия"})
+
 section.request.full
-	.bg
-		img(src='/images/request-bg-pre.jpg')
+	.bg.paralax
+		img(src='/images/preload/request-bg.jpg')
 	.container
 		h1.bg-white Заявка на участие
-		form
-			.fields
-				each field in formFields
-					div(class="input-field w" +  field.width)
-						label #{field.label}
-						input(type='text', value='my supper text')
-			.actions
-				.left
-					a(class='btns standart text', href='#') отправить заявку
-				.right
-					a(class='action', href='#') отель для участников и посетителей
-					a(class='action', href='#') скачать правила участия
+		+form(formFields, actions)
 
 

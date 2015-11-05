@@ -1,0 +1,19 @@
+- var formFields = []
+- formFields.push({label: "Название СМИ", width: 2})
+- formFields.push({label: "Сайт", width: 2})
+- formFields.push({label: "Контактное лицо", width: 1})
+- formFields.push({label: "телефон или e-mail", width: 1})
+
+section.media
+	.container
+		h1(class="bg-black-span")
+			span информация для 
+			br
+			span СМИ и спонсоров
+		.row
+			.left
+				p Для получение аккредитации на 8-ую Международную Московскую Тату Конвенцию 2016 необходимо заполнить и отправить запрос:
+			.right
+				p Подробную информацию по спонсорским пакетам и условиям сотрудничества можно получить по адресу marina@mostatcon.com
+		+form(formFields, [])
+		img(src="/images/media.png")

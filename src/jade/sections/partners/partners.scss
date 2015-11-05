@@ -1,0 +1,19 @@
+section.partners{
+	// min-height: 100vh;
+	.container{
+		padding-top: 80px;
+	}
+	.row{
+		@include clearfix;
+		width: $partners_width;
+		margin-top: 40px;
+		.element{
+			@extend .float-left;
+			width: $partners_element_width;
+			display: block;
+			overflow: hidden;
+			height: 150px;
+			text-align: center;
+		}
+	}
+}

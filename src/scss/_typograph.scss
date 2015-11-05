@@ -7,14 +7,36 @@ h1 {
 	&:first-child{
 		margin-top: 0;
 	}
-	&.bg-white{
-		color: $black;
-		background: $white;
+	&.bg-white,.bg-black,.bg-black-span{
 		display: inline-block;
 		font-weight: 100;
 		font-size: 36px;
 		letter-spacing: 2px;
 		padding: 0px 15px
+	}
+	&.bg-white{
+		color: $black;
+		background: $white;
+	}
+	&.bg-black{
+		color: $white;
+		background: $black;
+	}
+	&.bg-black-span{
+		span{
+			color: $white;
+			background: $black;
+			display: block;
+		}
+		display: inline-block;
+		font-size: 35px;
+		font-weight: 100;
+		letter-spacing: 2px;
+		span{
+			display: inline-block;
+			margin-top: 5px;
+			padding: 0 15px
+		}
 	}
 }
 p {

@@ -3,6 +3,11 @@ section.top-bar{
 	background: $top-bar-bg;
 	min-height: 75px;
 	z-index: $z-topbar;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 120;
 	.container{
 		padding: 0;
 		width: $container_width;

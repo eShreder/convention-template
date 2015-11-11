@@ -5,6 +5,26 @@
 }
 section.main-baner{
 	min-height: 100vh;
+	@include respond-to(phone) {
+		.container {
+			position: relative;
+			top:0;
+			@include transform(translateY(0));
+			.left,.right{
+				float: initial;
+				position: relative;
+				left: 0;
+				width: 100%;
+				svg{
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+			.right{
+				margin-top: 40px;
+			}
+		}
+	}
 	.container{
 		@extend .bottom;
 		@include clearfix;

@@ -1,4 +1,46 @@
 section.statistics{
+	@include respond-to(phone) {
+		img.mans{
+			display: none;
+		}
+		.container{
+			.col{
+				&.n1,&.n2,&.n3,&.n4,&.n5{
+					width: 100%;
+					margin: 20px 0;
+				}
+				&.n3{
+					&:nth-child(2){
+						margin-left: 0px;
+					}
+				}
+				.fact{
+					// margin: 
+					&.n1,&.n2,&.n3,&.n4,&.n5,{
+						width: 100%;
+						// transform:scale(0.8);
+						margin-left: 0;
+						left:0;
+						text-align: center;
+					}
+					&.n1{
+						p{
+							letter-spacing: -3px;
+    						margin-left: -22px;
+						}
+						span{
+							letter-spacing: 0px;
+						}
+					}
+					&.n2{
+						p{
+							letter-spacing: -2px;
+						}
+					}
+				}
+			}
+		}
+	}
 	padding-bottom: 40px;
 	img.mans{
 		position: absolute;

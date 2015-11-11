@@ -1,5 +1,12 @@
 section.request{
+	@include respond-to(phone) {
+		.container{
+			h1.bg-white{
+				display: none;
+			}
+		}
+	}
 	.container{
-		padding: 100px 0px 60px;
+		padding: 10px 0;
 	}
 }

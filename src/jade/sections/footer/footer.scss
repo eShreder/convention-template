@@ -1,6 +1,22 @@
 // $column_width: ($container_width - $container_paddin * 2) / 3;
 $paddin_column: 40px;
 section.footer{
+	@include respond-to(phone) {
+		.container.re{
+			.column{
+				width: 100%;
+				float: initial;
+				padding-top: 0;
+				margin-left: 0;
+			}
+			h1{
+				position: relative;
+			}
+			.nets{
+				right: 0;
+			}
+		}
+	}
 	background: $black;
 	color: $white;
 	.container{

@@ -8,9 +8,16 @@ section.top-bar{
 	left: 0;
 	width: 100%;
 	z-index: 120;
+	@include respond-to(phone) {
+		display: none;
+		// width: $screen-phone;
+	}
 	.container{
 		padding: 0;
 		width: $container_width;
+		@include respond-to(phone) {
+			width: $screen-phone;
+		}
 	}
 	.logo{
 		@extend .float-left;

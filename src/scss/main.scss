@@ -6,24 +6,17 @@
 
 @import 'button';
 
+@import 'mixins';
+
 .float-left{
 	float: left;
 }
-@mixin in_line(){
-	&:first-child{
-		margin-left: 0;
-		padding-left: 0;
-	}
-	&:last-child{
-		margin-right: 0;
-	}
-}
-
 
 html{
 	font-family: 'Ubuntu', sans-serif;
 }
 section{
+	background: $white;
 	&.full{
 		width: 100%;
 		position: relative;
@@ -69,8 +62,13 @@ section{
 div.container{
 	position: relative;
 	width: $container_width - $container_paddin * 2;
-	margin: 0 auto;
 	padding: $container_paddin;
+	margin: 0 auto;
+	@include respond-to(phone) {
+		width: 100%;
+		box-sizing: border-box;
+		padding: $container_paddin;
+	}
 }
 .text-right{
 	text-align: right;

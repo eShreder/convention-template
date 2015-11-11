@@ -1,4 +1,40 @@
 form.main{
+	@include respond-to(phone) {
+		.fields .input-field{
+			min-height: 120px;
+			height: initial;
+			@include clearfix;
+			&.w1,&.w2{
+				float: initial;
+				width: 100%;
+				padding: 15px 30px;
+			}
+			&.w2+.w2{
+				padding: 15px 30px;
+			}
+			label{
+				line-height: 20px;
+			}
+		}
+		&.re .actions{
+			.left,.right{
+				float: initial;
+				width: 100%;
+				margin: 10px auto;
+			}
+			.left{
+				text-align: center;
+			}
+			.right{
+				.action{
+					float: initial;
+					width: 100%;
+					padding: 15px 30px;
+					text-align: left;
+				}
+			}
+		}
+	}
 	.fields{
 		@include clearfix;
 		margin-top: 50px;

@@ -8,13 +8,6 @@
 	display: inline-block;
 	text-decoration: none;
 	line-height: 1;
-	&.s-net{
-		width: 20px;
-		height: 20px;
-		background-image: url('/images/facebook.png');
-		background-size: cover;
-		margin: 3px;
-	}
 	&.text{
 		display: inline-block;	
 		font-weight: 300;
@@ -26,6 +19,12 @@
 	    width: 100%;
 	}
 	&.standart{
-    	@include btns_param(243px, 5px, white); 
+    	@include btns_param(243px, 5px, white);
+    	&:hover{
+			@include btns_param(243px, 5px, $select); 
+    	}
+    	&:active{
+    		@include btns_param(243px, 5px, $gray3);
+    	}
     }
 }

@@ -1,0 +1,24 @@
+@mixin in_line(){
+	&:first-child{
+		margin-left: 0;
+		padding-left: 0;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media only screen and (max-width: $screen-phone) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $screen-phone + 1) and (max-width: $screen-tablet) { @content; }
+  }
+  @else if $media == md-min {
+    @media only screen and (min-width: $screen-tablet + 1) and (max-width: $screen-md-min) { @content; }
+  }
+  @else if $media == lg-desktop {
+    @media only screen and (min-width: $screen-lg-desktop) { @content; }
+  }
+}

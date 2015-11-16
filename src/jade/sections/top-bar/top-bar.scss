@@ -12,12 +12,32 @@ section.top-bar{
 		display: none;
 		// width: $screen-phone;
 	}
+	@include respond-to(tablet) {
+		display: none;
+	}
+	@include respond-to(md-min) {
+		overflow: hidden;
+
+		div.container{
+			width: 100%;
+			.menu{
+				a{
+					font-size: $font-size*0.8;
+					margin: 10px 5px;
+				}
+			}
+			.right-ls{
+				right: 10px;
+			} 
+		}
+	}
 	.container{
 		padding: 0;
 		width: $container_width;
 		@include respond-to(phone) {
 			width: $screen-phone;
 		}
+
 	}
 	.logo{
 		@extend .float-left;

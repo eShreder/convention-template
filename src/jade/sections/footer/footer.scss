@@ -17,6 +17,12 @@ section.footer{
 			}
 		}
 	}
+	@include respond-to(md-min) {
+		overflow: hidden;
+		div.container{
+			width: 100%;
+		}
+	}
 	background: $black;
 	color: $white;
 	.container{

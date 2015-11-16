@@ -1,4 +1,5 @@
 section.request{
+	padding: 60px 0;
 	@include respond-to(phone) {
 		.container{
 			h1.bg-white{

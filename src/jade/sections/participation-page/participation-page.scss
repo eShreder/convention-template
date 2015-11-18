@@ -1,0 +1,72 @@
+.page.participants{
+	min-height: 100vh;
+	.container{
+		z-index: 10;
+		color: $white;	
+		padding-top: 75px;
+		h1{
+			@extend .btns.text;
+			@include btns_param(480px, 16px, $white);
+			margin: 25px 0;
+			font-size: 42px;
+			font-weight: 500;
+			letter-spacing: 7px;
+			line-height: 75px;
+		}
+		.top-row{
+			position: relative;
+			top: 70px;
+			left: 16px;
+			height: 300px;
+		}
+		.left,.right{
+			position: absolute;
+		}
+		.right{
+			left: 520px;
+			top: 20px;
+			svg{
+				fill: $white;
+    			width: 250px;
+			}
+		}
+		.country{
+			margin-left: 20px;
+			margin-bottom: 60px;
+			.title{
+				font-size: 40px;
+				border-bottom: solid 5px $white;
+				text-transform: uppercase;
+				padding-bottom: 5px;
+				margin-bottom: 30px;
+				letter-spacing: 3px;
+			}
+		}
+		.wrap-list{
+			position: relative;
+			top: 30px;
+		}
+		.list{
+			.row-p{
+				font-weight: 100;
+				margin: 5px 0px;
+				font-size: 16px;
+				height: 32px;
+				letter-spacing: 2px;
+				span{
+					margin-right: 5px;
+				}
+				.nets{
+					display: inline-block;
+					position: relative;
+					top: 5px;
+					a{
+						background-size: cover;
+						width: 15px;
+						height: 15px;
+					}
+				}
+			}
+		}
+	}
+}

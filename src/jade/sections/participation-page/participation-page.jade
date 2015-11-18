@@ -1,0 +1,43 @@
+- var countrys = [];
+- countrys.push({title: 'Россия'});
+- countrys.push({title: 'Европа'});
+- countrys.push({title: 'Америка'});
+- var ptsp = [];
+- ptsp.push({name: 'Kathryn Fields', ln:'1', vk:'1'});
+- ptsp.push({name: 'Lynn Reynolds', fb:'1', vk:'1'});
+- ptsp.push({name: 'Darren Moore', fb:'1', vk:'1'});
+- ptsp.push({name: 'Sergio Flores', fb:'1', ln:'1', vk:'1'});
+- ptsp.push({name: 'Ross Kim', vk:'1'});
+- ptsp.push({name: 'Marion Chapman', vk:'1'});
+- ptsp.push({name: 'Emily Gilbert', ln:'1', vk:'1'});
+section.page.participants.full
+	.bg
+		img(src='/images/preload/main-baner.jpg')
+		.fade
+	.container
+		.top-row
+			.right
+				svg(
+					version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 			viewBox="20 116.1 389 234" 
+		 			style="enable-background:new 20 116.1 389 234;" 
+		 			xml:space="preserve"
+					)
+					use(
+							xlink:href="#main-baner-logo"
+						)
+			.left
+				h1 участники	
+		.wrap-list
+			each country in countrys
+				.country
+					.title
+						span
+							|#{country.title}
+					.list
+						each p in ptsp
+							.row-p
+								span
+									|#{p.name} 
+								+socialNets(p.vk, p.ln, p.fb)

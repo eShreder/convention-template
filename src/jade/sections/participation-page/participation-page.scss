@@ -1,5 +1,61 @@
 .page.participants{
 	min-height: 100vh;
+	@include respond-to(phone) {
+		.container.re{
+			width: 100%;
+			.left,.right{
+				position: relative;
+				left:0px;
+				display: block;
+			}
+			.top-row{
+				top: -20px;
+				height: inherit;
+				margin-bottom: 50px;
+				text-align: center;
+			}
+			.right{
+				svg{
+					width: 300px;
+					margin-bottom: 60px;
+				}
+			}
+			h1{
+				@include btns_param(300px, 12px, $white);
+				margin: 25px 0;
+				font-size: 29px;
+				font-weight: 500;
+				letter-spacing: 7px;
+				line-height: 45px;
+			}
+		}
+	}
+	@include respond-to(tablet) {
+		.container.re{
+			.left,.right{
+				position: relative;
+				left:0px;
+				display: block;
+			}
+			.top-row{
+				top: -20px;
+				height: inherit;
+				margin-bottom: 50px;
+				text-align: center;
+			}
+			.right{
+				svg{
+					width: 490px;
+					margin-bottom: 60px;
+				}
+			}
+		}
+	}
+	@include respond-to(md-min) {
+		$w-p: $screen-md-min - $container_paddin * 2;
+		.container{
+		}
+	}
 	.container{
 		z-index: 10;
 		color: $white;	
